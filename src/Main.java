@@ -43,8 +43,38 @@
 
 
 //MAIN
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome !");
+        while (true) {
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
+
+            System.out.println("1. ");
+            System.out.println("2. ");
+            System.out.println("3. ");
+            System.out.println("4. Quit");
+
+            switch (scanner.nextInt()) {
+                case 1 :
+                    break;
+                case 2 :
+                    break;
+                case 3 :
+                    break;
+                case 4 :
+                    scanner.close();
+                    System.exit(0);
+                    break;
+                default :
+                    System.out.println("Optiune invalida!");
+            }
+            
+            scanner.nextLine();
+        }
     }
 }
