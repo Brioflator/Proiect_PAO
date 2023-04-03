@@ -1,6 +1,6 @@
 package CARTI;
 
-import CARTI.CARTE;
+import java.util.Objects;
 
 public class BANDA_DESENATA extends CARTE
 {
@@ -11,6 +11,20 @@ public class BANDA_DESENATA extends CARTE
         return genre;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        BANDA_DESENATA that = (BANDA_DESENATA) o;
+        return paginiLucioase == that.paginiLucioase && Objects.equals(getGenre(), that.getGenre());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), getGenre(), paginiLucioase);
+    }
+
     public void setGenre(String genre) {
         this.genre = genre;
     }
@@ -18,11 +32,11 @@ public class BANDA_DESENATA extends CARTE
     public BANDA_DESENATA() {
         super();
         this.genre = "N/A";
-        this.paginiLucioase = false;
+        this.paginiLucioase = true;
     }
 
-    public BANDA_DESENATA(String editura, String titlu, String autor, int pret, String genre, boolean paginiLucioase) {
-        super(editura, titlu, autor, pret);
+    public BANDA_DESENATA(Integer cantitate, String editura, String titlu, String autor, int pret, String genre, boolean paginiLucioase) {
+        super(cantitate, editura, titlu, autor, pret);
         this.genre = genre;
         this.paginiLucioase = paginiLucioase;
     }

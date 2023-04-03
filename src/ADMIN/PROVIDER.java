@@ -1,17 +1,36 @@
 package ADMIN;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class PROVIDER {
     private String editura;
     private String[] carti;
-    private String[] numarCarti;
+    private Integer[] numarCarti;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PROVIDER provider = (PROVIDER) o;
+        return Objects.equals(getEditura(), provider.getEditura()) && Arrays.equals(getCarti(), provider.getCarti()) && Arrays.equals(getNumarCarti(), provider.getNumarCarti());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(getEditura());
+        result = 31 * result + Arrays.hashCode(getCarti());
+        result = 31 * result + Arrays.hashCode(getNumarCarti());
+        return result;
+    }
 
     public PROVIDER() {
         this.editura = "N/A";
         this.carti = new String[0];
-        this.numarCarti = new String[0];
+        this.numarCarti = new Integer[0];
     }
 
-    public PROVIDER(String editura, String[] carti, String[] numarCarti) {
+    public void PROVIDER(String editura, String[] carti, Integer[] numarCarti) {
         this.editura = editura;
         this.carti = carti;
         this.numarCarti = numarCarti;
@@ -31,11 +50,11 @@ public class PROVIDER {
         this.carti = carti;
     }
 
-    public String[] getNumarCarti() {
+    public Integer[] getNumarCarti() {
         return numarCarti;
     }
 
-    public void setNumarCarti(String[] numarCarti) {
+    public void setNumarCarti(Integer[] numarCarti) {
         this.numarCarti = numarCarti;
     }
 
