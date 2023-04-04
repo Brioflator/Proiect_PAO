@@ -41,5 +41,14 @@ public class ACTIONS {
         }
     }
 
+    public static void clearCarti() {
+        ACTIONS.inventarCarti = new CARTE[0];
+    }
+
+    public static  void printCarti() {
+        for (int i = 0; i < ACTIONS.nrCarti; i++) {
+            System.out.println(ACTIONS.inventarCarti[i].toString());
+        }
+    }
 
 }
