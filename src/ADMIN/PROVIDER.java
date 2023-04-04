@@ -1,9 +1,9 @@
 package ADMIN;
 
-import java.util.Arrays;
-import java.util.Objects;
+import java.util.*;
 
 public class PROVIDER {
+    private List<String> edituri_available = Arrays.asList("Humanitas", "Litera", "Polirom", "Corint", "N/A");
     private String editura;
     private String[] carti;
     private Integer[] numarCarti;
@@ -56,6 +56,19 @@ public class PROVIDER {
 
     public void setNumarCarti(Integer[] numarCarti) {
         this.numarCarti = numarCarti;
+    }
+
+    public boolean check_editura(String editura) {
+        if (edituri_available.contains(editura)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void sort_ediura()
+    {
+        Collections.sort(edituri_available);
     }
 
     @Override
