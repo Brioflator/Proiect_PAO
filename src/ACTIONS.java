@@ -1,5 +1,7 @@
 import ADMIN.PROVIDER;
 import CARTI.CARTE;
+import CARTI.DICTIONAR;
+import CARTI.BANDA_DESENATA;
 
 import java.util.*;
 
