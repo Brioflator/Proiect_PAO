@@ -26,7 +26,7 @@ public class CLIENT {
 
     public CLIENT() {
         this.nume = "N/A";
-        this.id = idCounter++;
+        this.id = ++idCounter;
         this.buget = 0;
         this.card_fidelitate = "N/A";
         this.cos = new COS();
@@ -36,7 +36,7 @@ public class CLIENT {
 
     public CLIENT(String nume, Integer buget, String card_fidelitate) {
         this.nume = nume;
-        this.id = idCounter++;
+        this.id = ++idCounter;
         this.buget = buget;
         this.card_fidelitate = card_fidelitate;
         this.cos = new COS();

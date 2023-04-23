@@ -29,7 +29,7 @@ public class CARTE {
         this.autor = "N/A";
         this.pret = 0;
     }
-    public CARTE(Integer cantitate, String editura, String titlu, String autor, int pret) {
+    public CARTE(int cantitate, String editura, String titlu, String autor, int pret) {
         this.cantitate = cantitate;
         this.editura = editura;
         this.titlu = titlu;
@@ -80,9 +80,9 @@ public class CARTE {
     @Override
     public String toString() {
         return "CARTI.CARTE{" +
-                "cantitate=" + cantitate +
-                "editura='" + editura + '\'' +
-                "titlu='" + titlu + '\'' +
+                "cantitate=" + cantitate + '\'' +
+                ", editura='" + editura + '\'' +
+                ", titlu='" + titlu + '\'' +
                 ", autor='" + autor + '\'' +
                 ", pret=" + pret +
                 '}';

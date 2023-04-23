@@ -1,9 +1,8 @@
 import ADMIN.PROVIDER;
 import CARTI.CARTE;
-import CARTI.DICTIONAR;
-import CARTI.BANDA_DESENATA;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ACTIONS {
     //CRUD pentru carti
@@ -44,7 +43,8 @@ public class ACTIONS {
     }
 
     public static void clearCarti() {
-        ACTIONS.inventarCarti = new CARTE[0];
+        ACTIONS.inventarCarti = null;
+        ACTIONS.nrCarti = 0;
     }
 
     public static  void printCarti() {

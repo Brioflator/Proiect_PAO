@@ -7,12 +7,14 @@ public class DICTIONAR extends CARTE {
     private String limba1, limba2;
     
     public DICTIONAR() {
+        super();
         this.nrCuvinte = 0;
         this.limba1 = "";
         this.limba2 = "";
     }
 
-    public DICTIONAR(int nrCuvinte, String limba1, String limba2) {
+    public DICTIONAR(int cantitate, String editura, String titlu, String autor, int pret, int nrCuvinte, String limba1, String limba2) {
+        super(cantitate, editura, titlu, autor, pret);
         this.nrCuvinte = nrCuvinte;
         this.limba1 = limba1;
         this.limba2 = limba2;
